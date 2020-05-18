@@ -22,13 +22,13 @@ const handleRequest = function (request, response) {
 
  if (request.url === '/webrtc.js') {
     response.writeHead(200, { 'Content-Type': 'application/javascript' });
-    response.end(fs.readFileSync('client/webrtc.js'));
+    response.end(fs.readFileSync('public/webrtc.js'));
   } else if (request.url === '/style.css') {
     response.writeHead(200, { 'Content-Type': 'text/css' });
-    response.end(fs.readFileSync('client/style.css'));
+    response.end(fs.readFileSync('public/style.css'));
   } else {
     response.writeHead(200, { 'Content-Type': 'text/html' });
-    response.end(fs.readFileSync('client/index.html'));
+    response.end(fs.readFileSync('public/index.html'));
   }
 };
 
